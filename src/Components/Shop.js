@@ -6,7 +6,7 @@ import {actionCreators} from '../State/index';
 
 export default function Shop() {
   const dispatch = useDispatch();
-  const {depositMoney,withdrawMoney} = bindActionCreators(actionCreators, dispatch);
+  const {depositMoney,withdrawMoney,countDeposit,countWithdraw} = bindActionCreators(actionCreators, dispatch);
   return (
     <>
         <h1>Deposit/Withdraw Money</h1>
@@ -15,9 +15,9 @@ export default function Shop() {
             {/* <button className="btn btn-primary mx-2" onClick={()=>{dispatch(actionCreators.withdrawMoney(50))}}>-</button>
                 Update Balance
             <button className="btn btn-primary mx-2" onClick={()=>{dispatch(actionCreators.depositMoney(50))}}>+</button> */}
-            <button className="btn btn-primary mx-2" onClick={()=>{withdrawMoney(50)}}>-</button>
+            <button className="btn btn-primary mx-2" onClick={()=>{withdrawMoney(50); countWithdraw(1);}}>-</button>
                 Update Balance
-            <button className="btn btn-primary mx-2" onClick={()=>{depositMoney(50)}}>+</button>
+            <button className="btn btn-primary mx-2" onClick={()=>{depositMoney(50); countDeposit(1)}}>+</button>
         </div>
     </>
   )

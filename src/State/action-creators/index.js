@@ -15,3 +15,21 @@ export const withdrawMoney= (amount) =>{
         })
     }
 }
+
+export const countDeposit = (num) =>{
+    return (dispatch)=>{
+        dispatch({
+            type : 'add',           //This type has to be different for each different vaiables, this method is targetting the count variables, whichiis different from the total money variables in the depositMoney and withdrawMoney function.
+            payload : num
+        })
+    }
+}
+
+export const countWithdraw = (num) =>{
+    return (dispatch)=>{
+        dispatch({
+            type : 'substract',
+            payload : num
+        })
+    }
+}

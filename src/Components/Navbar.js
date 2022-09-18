@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 
 function Navbar() {
     const amount = useSelector(state => state.amount);
+    const count = useSelector(state => state.count);
   return (
     <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -21,7 +22,10 @@ function Navbar() {
             </li>
             </ul>
         </div>
-        <div>
+        <div className='mx-1'>
+            <button disable={true} className="btn btn-primary">{count}</button>
+        </div>
+        <div className='mx-1'>
             <button disable={true} className="btn btn-primary">{amount}</button>
         </div>
         </nav>
