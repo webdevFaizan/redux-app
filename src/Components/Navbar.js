@@ -1,6 +1,8 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 function Navbar() {
+    const amount = useSelector(state => state.amount);
   return (
     <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -20,7 +22,7 @@ function Navbar() {
             </ul>
         </div>
         <div>
-            <button disable={true} className="btn btn-primary">1000</button>
+            <button disable={true} className="btn btn-primary">{amount}</button>
         </div>
         </nav>
     </>

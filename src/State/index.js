@@ -1,0 +1,1 @@
+export * as actionCreators from './action-creators/index';      //The role of this file and this line is to allow any variable outside this state folder to access by just importing this file. This file and this line will improve the accessibility only.
